@@ -16,7 +16,7 @@ Figures produced:
 
 Usage:
     python plot_paper.py
-    python plot_paper.py --base /path/to/hoa-corpus
+    python plot_paper.py --base-dir /path/to/hoa-corpus
 
 Author: Bartlomiej Mroz
 """
@@ -240,13 +240,13 @@ def collect_metrics(base_dir):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--base", type=Path, default=DEFAULT_BASE)
+    ap.add_argument("--base-dir", type=Path, default=DEFAULT_BASE)
     ap.add_argument("--out", type=Path,
                     default=Path(__file__).resolve().parent / "paper_results")
     args = ap.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
 
-    metrics = collect_metrics(args.base)
+    metrics = collect_metrics(args.base_dir)
 
     print("[i] Drawing figures")
     figure_spatial_energy(metrics, args.out / "fig_spatial_energy")

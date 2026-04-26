@@ -775,19 +775,19 @@ def write_tex(metrics, derived, out_path, base_dir):
 # ---------------------------------------------------------------------------
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    ap.add_argument("--base", type=Path, default=DEFAULT_BASE,
+    ap.add_argument("--base-dir", type=Path, default=DEFAULT_BASE,
                     help=f"Base directory holding session folders (default: {DEFAULT_BASE})")
     ap.add_argument("--out", type=Path,
                     default=Path(__file__).resolve().parent / "paper_results",
                     help="Output directory for CSV/TEX")
     args = ap.parse_args()
 
-    if not args.base.exists():
-        print(f"[!] Base directory not found: {args.base}", file=sys.stderr)
+    if not args.base_dir.exists():
+        print(f"[!] Base directory not found: {args.base_dir}", file=sys.stderr)
         sys.exit(1)
     args.out.mkdir(parents=True, exist_ok=True)
 
-    metrics = run_analysis(args.base)
+    metrics = run_analysis(args.base_dir)
     derived = derive_pair_metrics(metrics)
 
     write_per_file_csv(metrics, args.out / "per_file_metrics.csv")
@@ -795,7 +795,7 @@ def main():
     write_lufs_csv(derived, args.out / "lufs_pairs.csv")
     write_spatial_csv(metrics, args.out / "spatial_energy.csv")
     write_directional_csv(metrics, args.out / "directional.csv")
-    write_tex(metrics, derived, args.out / "paper_variables.tex", args.base)
+    write_tex(metrics, derived, args.out / "paper_variables.tex", args.base_dir)
 
     print()
     print(f"[OK] Wrote {args.out}/")

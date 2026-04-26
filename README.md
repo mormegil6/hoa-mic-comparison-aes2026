@@ -39,7 +39,7 @@ For methodology, interpretation, and results discussion, please refer to the mai
 
 **Recording corpus**: Higher-Order Ambisonics Recording Corpus, deposited at *Bridge of Data* (Most Danych), Gdańsk University of Technology — [doi.org/10.34808/5xe2-ah94](https://doi.org/10.34808/5xe2-ah94) (CC BY-NC-SA 4.0)
 
-The recordings are not included in this repository. Download them separately from the DOI above and point the analysis script to their location with `--base`.
+The recordings are not included in this repository. Download them separately from the DOI above and point the analysis script to their location with `--base-dir`.
 
 Two recording sessions at the Main Aula of Gdańsk University of Technology (RT60 ≈ 1.97 s):
 
@@ -85,7 +85,7 @@ pip install numpy scipy soundfile matplotlib pyyaml
 python3 analyze_paper.py
 
 # Point to the corpus download location:
-python3 analyze_paper.py --base /path/to/hoa-corpus
+python3 analyze_paper.py --base-dir /path/to/hoa-corpus
 ```
 
 Running `analyze_paper.py` calls `plot_paper.py` automatically. All outputs are written to `paper_results/`.
