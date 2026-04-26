@@ -39,7 +39,7 @@ For methodology, interpretation, and results discussion, please refer to the mai
 
 **Recording corpus**: Higher-Order Ambisonics Recording Corpus, deposited at *Bridge of Data* (Most Danych), Gdańsk University of Technology — [doi.org/10.34808/5xe2-ah94](https://doi.org/10.34808/5xe2-ah94) (CC BY-NC-SA 4.0)
 
-The recordings are not included in this repository. Download them separately from the DOI above and point the analysis script to their location with `--base-dir`.
+The recordings are not included in this repository. Download them separately from the DOI above and point the analysis script to their location with `--base`.
 
 Two recording sessions at the Main Aula of Gdańsk University of Technology (RT60 ≈ 1.97 s):
 
