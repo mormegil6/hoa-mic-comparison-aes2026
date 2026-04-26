@@ -40,18 +40,18 @@ For methodology, interpretation, and results discussion, please refer to the mai
 
 ## Recordings
 
-**Recording corpus**: Higher-Order Ambisonics Recording Corpus, deposited at *Bridge of Data* (Most Danych), Gdańsk University of Technology — [doi.org/10.34808/5xe2-ah94](https://doi.org/10.34808/5xe2-ah94) (CC BY-NC-SA 4.0)
+**Recording corpus**: Higher-Order Ambisonics Recording Corpus, deposited at *Bridge of Data* (Most Danych), Gdańsk University of Technology - [doi.org/10.34808/5xe2-ah94](https://doi.org/10.34808/5xe2-ah94) (CC BY-NC-SA 4.0)
 
 The recordings are not included in this repository. Download them separately from the DOI above and point the analysis script to their location with `--base-dir`.
 
 Two recording sessions at the Main Aula of Gdańsk University of Technology (RT60 ≈ 1.97 s):
 
-**Session 1** — 2024-08-15 · Microphone comparison (ZM-1, Spcmic, Saramonic SR-VRMIC)
-- Repertoire: César Franck — *Prélude, Choral et Fugue*; Sergei Prokofiev — *Piano Sonata No. 4 in C minor, Op. 29*
+**Session 1** - 2024-08-15 · Microphone comparison (ZM-1, Spcmic, Saramonic SR-VRMIC)
+- Repertoire: César Franck - *Prélude, Choral et Fugue*; Sergei Prokofiev - *Piano Sonata No. 4 in C minor, Op. 29*
 - Performer: Piotr Pawlak (piano)
 
-**Session 2** — 2024-04-30 · Microphone comparison (ZM-1, Spcmic)
-- Repertoire: Alberto Ginastera — *Piano Sonata No. 1, Op. 22*
+**Session 2** - 2024-04-30 · Microphone comparison (ZM-1, Spcmic)
+- Repertoire: Alberto Ginastera - *Piano Sonata No. 1, Op. 22*
 - Performer: Mikołaj Sikała (piano)
 
 ## What `analyze_paper.py` Computes
@@ -68,12 +68,12 @@ The script reads rendered B-format WAV files and writes:
 | `paper_results/paper_variables.tex` | `\newcommand` definitions consumed by the manuscript |
 | `paper_results/fig_*.pdf` | Publication figures (vector, for the paper) |
 | `paper_results/fig_*.png` | Publication figures (raster previews) |
-| `paper_results/recording1_photo1.jpg` | Recording session 1 — photo 1 |
-| `paper_results/recording1_photo2.jpg` | Recording session 1 — photo 2 |
-| `paper_results/recording2_photo1.jpg` | Recording session 2 — photo 1 |
-| `paper_results/recording2_photo2.jpg` | Recording session 2 — photo 2 |
+| `paper_results/recording1_photo1.jpg` | Recording session 1 - photo 1 |
+| `paper_results/recording1_photo2.jpg` | Recording session 1 - photo 2 |
+| `paper_results/recording2_photo1.jpg` | Recording session 2 - photo 1 |
+| `paper_results/recording2_photo2.jpg` | Recording session 2 - photo 2 |
 
-The manuscript imports `paper_variables.tex` via `\input{}` — every numeric claim is written as a macro, so re-running `analyze_paper.py` and recompiling LaTeX is the complete reproducibility loop.
+The manuscript imports `paper_variables.tex` via `\input{}` - every numeric claim is written as a macro, so re-running `analyze_paper.py` and recompiling LaTeX is the complete reproducibility loop.
 
 LUFS-I is computed in-script via ITU-R BS.1770-5 K-weighting on the W channel; no dependency on `pyloudnorm` or REAPER render statistics.
 
