@@ -30,7 +30,10 @@ For methodology, interpretation, and results discussion, please refer to the mai
 │   ├── paper_variables.tex
 │   ├── fig_*.pdf
 │   ├── fig_*.png
-│   └── fig_setup_recording2.jpg
+│   ├── recording1_photo1.jpg
+│   ├── recording1_photo2.jpg
+│   ├── recording2_photo1.jpg
+│   └── recording2_photo2.jpg
 ├── LICENSE
 └── README.md
 ```
@@ -65,7 +68,10 @@ The script reads rendered B-format WAV files and writes:
 | `paper_results/paper_variables.tex` | `\newcommand` definitions consumed by the manuscript |
 | `paper_results/fig_*.pdf` | Publication figures (vector, for the paper) |
 | `paper_results/fig_*.png` | Publication figures (raster previews) |
-| `paper_results/fig_setup_recording2.jpg` | Recording session setup photo |
+| `paper_results/recording1_photo1.jpg` | Recording session 1 — photo 1 |
+| `paper_results/recording1_photo2.jpg` | Recording session 1 — photo 2 |
+| `paper_results/recording2_photo1.jpg` | Recording session 2 — photo 1 |
+| `paper_results/recording2_photo2.jpg` | Recording session 2 — photo 2 |
 
 The manuscript imports `paper_variables.tex` via `\input{}` — every numeric claim is written as a macro, so re-running `analyze_paper.py` and recompiling LaTeX is the complete reproducibility loop.
 
