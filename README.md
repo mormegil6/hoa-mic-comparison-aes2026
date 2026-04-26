@@ -124,9 +124,11 @@ If you use this code or the recordings, please cite:
 
 ## License
 
-This work is licensed under a [Creative Commons Attribution 4.0 International License][cc-by].
+**Code in this repository**: licensed under [Creative Commons Attribution 4.0 International License][cc-by].
 
 [![CC BY 4.0][cc-by-image]][cc-by]
+
+**Recordings at the linked DOI**: CC BY-NC-SA 4.0 (set by the corpus deposit; not changed by this repository).
 
 [cc-by]: https://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
