@@ -1,0 +1,9 @@
+key,mic,format,piece,order0_dBFS,order1_dBFS,order2_dBFS,order3_dBFS,order4_dBFS,order5_dBFS,rolloff_0_to_3_dB
+ZMOneFranck,ZM-1,3OA,Franck,-23.216,-31.783,-42.925,-50.612,,,27.396
+ZMOneProkofiev,ZM-1,3OA,Prokofiev,-22.838,-31.481,-40.903,-48.841,,,26.003
+ZMOneGinastera,ZM-1,3OA,Ginastera,-21.458,-30.998,-39.251,-43.600,,,22.143
+SpcmicThreeOAFranck,Spcmic,3OA,Franck,-26.246,-30.788,-33.039,-34.684,,,8.438
+SpcmicThreeOAProkofiev,Spcmic,3OA,Prokofiev,-25.669,-30.282,-32.307,-34.149,,,8.480
+SpcmicFiveOAFranck,Spcmic,5OA,Franck,-26.202,-30.753,-37.949,-41.304,-44.383,-47.052,15.102
+SpcmicFiveOAProkofiev,Spcmic,5OA,Prokofiev,-25.641,-30.233,-37.614,-41.128,-44.351,-47.093,15.487
+SpcmicFiveOAGinastera,Spcmic,5OA,Ginastera,-22.742,-28.437,-34.329,-37.752,-40.718,-43.281,15.010

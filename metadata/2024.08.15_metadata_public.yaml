@@ -1,0 +1,145 @@
+# Public Metadata for HOA Recording Corpus
+# Session: 2024.08.15 -- ZM1 Spcmic Saramonic
+# Generated: 2026-02-01
+# 
+# This is the publication-ready metadata. For internal documentation,
+# see metadata.yaml (not included in published corpus).
+
+session_id: 2024-08-15-microphone-comparison
+recording_date: '2024-08-15'
+duration_minutes: 35.8
+venue:
+  name: Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology)
+  type: concert_hall
+  city: Gdańsk
+  country: Poland
+  url: https://pg.edu.pl/centrum-logistyczne/sale-konferencyjne/aula
+  coordinates:
+  - 54.3717
+  - 18.6193
+acoustics:
+  room_length_m: 28.2
+  room_width_m: 11.5
+  room_height_m: 9.5
+  seating_capacity: 370
+  rt60_T30_seconds: 1.97
+  rt60_T20_seconds: 1.91
+  rt60_EDT_seconds: 1.92
+  clarity_C80_dB: -1.8
+  clarity_C50_dB: -4.3
+  definition_D50_percent: 27
+  center_time_Ts_ms: 146
+  lateral_energy_fraction_LEF: 0.068
+  direct_reverb_ratio_DRR_dB: -13.2
+  diffuseness_early: 0.62
+  diffuseness_late: 0.89
+  rt60_octave_bands:
+    125Hz: 2.28
+    250Hz: 2.27
+    500Hz: 2.04
+    1kHz: 1.9
+    2kHz: 1.74
+    4kHz: 1.5
+    8kHz: 1.06
+  audience_present: false
+equipment:
+  primary_mic_model: Zylia ZM-1
+  primary_mic_serial: SM19DRXWS03100AR
+  primary_mic_mount: Long stereo bar on tripod (all mics mounted together)
+  primary_mic_height_m: 1.5
+  primary_mic_distance_source_m: 1.5
+  primary_mic_orientation: inclined towards piano, looking inside well from distance
+  secondary_mics:
+  - model: Harpex Spcmic
+    channels: 84
+    purpose: Comparison - 5OA and 3OA conversions
+    processing:
+    - Spacemic VST 1.0.2 alpha (A-format to 5OA B-format, 36 channels)
+    - Spcmic 0.9.1 beta (A-format to 3OA B-format, 16 channels)
+  - model: Saramonic SR-VRMIC
+    channels: 4
+    purpose: Comparison - budget 1OA option
+    processing: A-format to 1OA B-format via Audio Brewers ab Transcoder (custom IRs from anechoic measurement)
+    notes: Chinese Sennheiser Ambeo knock-off; anechoic chamber measured IRs used in Audio Brewers ab Transcoder
+recording_settings:
+  sample_rate_hz: 48000
+  bit_depth: 24
+  raw_channels: 20
+  recording_software: REAPER
+  daw: REAPER
+content:
+  type: solo_piano
+  genre: classical
+  performers_count: 1
+  purpose: Microphone comparison test - multiple HOA microphones
+instruments:
+- piano (Steinway D, serial D560633)
+performers:
+- name: Piotr Pawlak
+  role: piano
+repertoire:
+- composer: César Franck
+  title: Prélude, Choral et Fugue
+  duration_minutes: 19.2
+- composer: Sergei Prokofiev
+  title: Piano Sonata No. 4 in C minor, Op. 29
+  duration_minutes: 16.6
+processing:
+  ambisonics: true
+  ambisonics_order: 3
+  ambisonics_channels: 16
+  processing_chain: A-to-B format conversion only (Zylia Ambisonics Converter)
+files:
+- filename: 3OA_ZM1_CFranck-PreludeChoralFugue.wav
+  duration_minutes: 19.2
+  channels: 16
+  lufs_i: -21.48
+- filename: 3OA_ZM1_SProkofiev-Sonata4.wav
+  duration_minutes: 16.4
+  channels: 16
+  lufs_i: -20.62
+- filename: 5OA_Spcmic_CFranck-PreludeChoralFugue.wav
+  duration_minutes: 19.2
+  channels: 36
+  lufs_i: -20.35
+  notes: Spacemic VST 1.0.2 alpha
+- filename: 5OA_Spcmic_SProkofiev-Sonata4.wav
+  duration_minutes: 16.4
+  channels: 36
+  lufs_i: -19.62
+  notes: Spacemic VST 1.0.2 alpha
+- filename: 3OA_Spcmic_CFranck-PreludeChoralFugue.wav
+  duration_minutes: 19.2
+  channels: 16
+  lufs_i: -18.19
+  notes: Spcmic 0.9.1 beta
+- filename: 3OA_Spcmic_SProkofiev-Sonata4.wav
+  duration_minutes: 16.4
+  channels: 16
+  lufs_i: -17.29
+  notes: Spcmic 0.9.1 beta
+- filename: 1OA_SRVRMIC_CFranck-PreludeChoralFugue.wav
+  duration_minutes: 19.2
+  channels: 4
+  lufs_i: -21.85
+  notes: Audio Brewers ab Transcoder with custom anechoic IRs
+- filename: 1OA_SRVRMIC_SProkofiev-Sonata4.wav
+  duration_minutes: 16.4
+  channels: 4
+  lufs_i: -20.97
+  notes: Audio Brewers ab Transcoder with custom anechoic IRs
+rendered_files_count: 8
+rendered_files_size_gb: 35.2
+quality:
+  peak_normalization_dbtp: -0.5
+  lufs_i_range:
+  - -21.85
+  - -17.29
+  lufs_i_average: -20.05
+  dynamic_preservation: true
+  clipping_detected: false
+  quality_rating: excellent
+  notes: Peak normalized to -0.5 dBTP; relative dynamics preserved within session; 8 HOA renders across 4 mics
+photos_count: 11
+notes: Microphone comparison session for research; photos document all mics on single stereo bar
+acoustics_reference: Król & Jankowski (2023), MSc thesis, Gdańsk University of Technology

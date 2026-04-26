@@ -1,93 +1,133 @@
-# Hoa Mic Comparison Aes2026
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)]() [![numpy](https://img.shields.io/badge/numpy-1.24+-blue.svg)]() [![scipy](https://img.shields.io/badge/scipy-1.11+-blue.svg)]() [![soundfile](https://img.shields.io/badge/soundfile-0.12+-blue.svg)]() [![matplotlib](https://img.shields.io/badge/matplotlib-3.7+-blue.svg)]() [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
+# ZM-1 vs Spcmic — HOA Recording Performance Analysis
 
+Supplementary materials for the paper: **"Zylia ZM-1 vs. Harpex Spcmic: A Case Study of Higher-Order Ambisonic Recording Performance"**
 
-## Getting started
+This repository contains:
+- Reproducible analysis pipeline (Python scripts)
+- Session metadata (two recording sessions)
+- Pre-computed results (CSV tables, LaTeX macros, publication figures)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+For methodology, interpretation, and results discussion, please refer to the main paper.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## Repository Structure
 
 ```
-cd existing_repo
-git remote add origin https://git.pg.edu.pl/p829296/hoa-mic-comparison-aes2026.git
-git branch -M main
-git push -uf origin main
+.
+├── analyze_paper.py                        # Single-source analysis script
+├── plot_paper.py                           # Figure generation (called from analyze_paper.py)
+├── check_aliasing_band.py                  # Spatial-aliasing band verification
+├── metadata/
+│   ├── 2024.04.30_metadata_public.yaml     # April 2024 session (Ginastera)
+│   └── 2024.08.15_metadata_public.yaml     # August 2024 session (Franck, Prokofiev)
+├── paper_results/
+│   ├── per_file_metrics.csv
+│   ├── spectral_band_diff.csv
+│   ├── lufs_pairs.csv
+│   ├── spatial_energy.csv
+│   ├── directional.csv
+│   ├── paper_variables_submission51-ZM1vsSpcmic.tex
+│   └── fig_*.pdf
+├── LICENSE
+└── README.md
 ```
 
-## Integrate with your tools
+## Recordings
 
-- [ ] [Set up project integrations](https://git.pg.edu.pl/p829296/hoa-mic-comparison-aes2026/-/settings/integrations)
+**Recording corpus**: Higher-Order Ambisonics Recording Corpus, deposited at *Bridge of Data* (Most Danych), Gdańsk University of Technology — [doi.org/10.34808/5xe2-ah94](https://doi.org/10.34808/5xe2-ah94) (CC BY-NC-SA 4.0)
 
-## Collaborate with your team
+The recordings are not included in this repository. Download them separately from the DOI above and point the analysis script to their location with `--base-dir`.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+Two recording sessions at the Main Aula of Gdańsk University of Technology (RT60 ≈ 1.97 s):
 
-## Test and Deploy
+**Session 1** — 2024-08-15 · Microphone comparison (ZM-1, Spcmic, Saramonic SR-VRMIC)
+- Repertoire: César Franck — *Prélude, Choral et Fugue*; Sergei Prokofiev — *Piano Sonata No. 4 in C minor, Op. 29*
+- Performer: Piotr Pawlak (piano)
 
-Use the built-in continuous integration in GitLab.
+**Session 2** — 2024-04-30 · Microphone comparison (ZM-1, Spcmic)
+- Repertoire: Alberto Ginastera — *Piano Sonata No. 1, Op. 22*
+- Performer: Mikołaj Sikała (piano)
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+## What `analyze_paper.py` Computes
 
-***
+The script reads rendered B-format WAV files and writes:
 
-# Editing this README
+| Output file | Contents |
+|---|---|
+| `paper_results/per_file_metrics.csv` | Per-file RMS / order energies / LUFS |
+| `paper_results/spectral_band_diff.csv` | ZM-1 minus Spcmic W-PSD per frequency |
+| `paper_results/lufs_pairs.csv` | LUFS deltas per (mic, piece) |
+| `paper_results/spatial_energy.csv` | Per-order dBFS, rolloff, delta |
+| `paper_results/directional.csv` | X/W, Y/W, Z/W ratios per file |
+| `paper_results/paper_variables_*.tex` | `\newcommand` definitions consumed by the manuscript |
+| `paper_results/fig_*.pdf` | Publication figures |
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+The manuscript imports `paper_variables.tex` via `\input{}` — every numeric claim is written as a macro, so re-running `analyze_paper.py` and recompiling LaTeX is the complete reproducibility loop.
 
-## Suggestions for a good README
+LUFS-I is computed in-script via ITU-R BS.1770-5 K-weighting on the W channel; no dependency on `pyloudnorm` or REAPER render statistics.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## Reproducing the Analysis
 
-## Name
-Choose a self-explaining name for your project.
+### Prerequisites
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+```sh
+pip install numpy scipy soundfile matplotlib pyyaml
+```
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### Run the Analysis
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+```sh
+# Default: reads recordings from /Volumes/PNY 1TB/HOA recordings by BM - all
+python3 analyze_paper.py
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+# Point to a custom location:
+python3 analyze_paper.py --base-dir /path/to/corpus
+```
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Running `analyze_paper.py` calls `plot_paper.py` automatically. All outputs are written to `paper_results/`.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+**Note**: `check_aliasing_band.py` is a standalone verification script that re-computes spatial-energy rolloff restricted to sub-aliasing frequency bins (< 3 kHz). Run it separately if needed:
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+```sh
+python3 check_aliasing_band.py
+```
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+## Citation
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+If you use this code or the recordings, please cite:
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+```bibtex
+@inproceedings{mroz2026zm1spcmic,
+  author    = {Mr\'oz, Bart\l{}omiej and Zaporowski, Szymon},
+  title     = {{Zylia ZM-1} vs. {Harpex Spcmic}: A Case Study of
+               Higher-Order Ambisonic Recording Performance},
+  booktitle = {Audio Engineering Society Convention 160},
+  address   = {Copenhagen, Denmark},
+  month     = may,
+  year      = {2026},
+  note      = {Express Paper 51}
+}
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+@misc{mroz2026hoacorpus,
+  author    = {Mr\'oz, Bart\l{}omiej and Zaporowski, Szymon},
+  title     = {Higher-Order Ambisonics Recording Corpus},
+  year      = {2026},
+  publisher = {Bridge of Data (Most Danych), Gda\'nsk University of Technology},
+  doi       = {10.34808/5xe2-ah94},
+  url       = {https://doi.org/10.34808/5xe2-ah94}
+}
+```
 
 ## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+This work is licensed under a [Creative Commons Attribution 4.0 International License][cc-by].
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: https://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+
+## Contact
+
+Bartłomiej Mróz · bartlomiej.mroz@pg.edu.pl · Department of Multimedia Systems, Gdańsk University of Technology

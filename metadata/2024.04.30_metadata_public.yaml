@@ -1,0 +1,118 @@
+# Public Metadata for HOA Recording Corpus
+# Session: 2024.04.30 -- piano recording
+# Generated: 2026-02-01
+# 
+# This is the publication-ready metadata. For internal documentation,
+# see metadata.yaml (not included in published corpus).
+
+session_id: 2024-04-30-piano-mikolaj-sikala
+recording_date: '2024-04-30'
+duration_minutes: 15.4
+venue:
+  name: Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology)
+  type: concert_hall
+  city: Gdańsk
+  country: Poland
+  url: https://pg.edu.pl/centrum-logistyczne/sale-konferencyjne/aula
+  coordinates:
+  - 54.3717
+  - 18.6193
+acoustics:
+  room_length_m: 28.2
+  room_width_m: 11.5
+  room_height_m: 9.5
+  seating_capacity: 370
+  rt60_T30_seconds: 1.97
+  rt60_T20_seconds: 1.91
+  rt60_EDT_seconds: 1.92
+  clarity_C80_dB: -1.8
+  clarity_C50_dB: -4.3
+  definition_D50_percent: 27
+  center_time_Ts_ms: 146
+  lateral_energy_fraction_LEF: 0.068
+  direct_reverb_ratio_DRR_dB: -13.2
+  diffuseness_early: 0.62
+  diffuseness_late: 0.89
+  rt60_octave_bands:
+    125Hz: 2.28
+    250Hz: 2.27
+    500Hz: 2.04
+    1kHz: 1.9
+    2kHz: 1.74
+    4kHz: 1.5
+    8kHz: 1.06
+  audience_present: false
+equipment:
+  primary_mic_model: Zylia ZM-1
+  primary_mic_serial: SM19DRXWS03100AR
+  primary_mic_mount: K&M tripod with K&M 23550 stereo bar (shared with Spcmic, ~17cm apart)
+  primary_mic_height_m: 1.7
+  primary_mic_distance_source_m: 0.5
+  primary_mic_orientation: facing piano well/soundboard
+  secondary_mics:
+  - model: Harpex Spcmic
+    channels: 84
+    purpose: Comparison recording - 5OA conversion
+    processing: Spacemic VST 1.0.2 alpha (A-format to 5OA B-format, 36 channels)
+    height_m: 1.7
+  - model: AKG C4000B (x3)
+    channels: 3
+    purpose: Even piano coverage (Haigh, Dunkerley & Rogers, 2021, §5.7.1)
+  - model: AKG C414 (x2)
+    channels: 2
+    purpose: Main stereo
+  - model: Neumann SM69 FET
+    channels: 2
+    purpose: Stereo room capture
+recording_settings:
+  sample_rate_hz: 48000
+  bit_depth: 24
+  raw_channels: 20
+  recording_software: REAPER
+  daw: REAPER
+content:
+  type: solo_piano
+  genre: classical_20th_century
+  performers_count: 1
+  purpose: Piano competition application - uninterrupted performance
+instruments:
+- piano (Steinway & Sons D, serial D560633)
+performers:
+- name: Mikołaj Sikała
+  role: piano
+repertoire:
+- composer: Alberto Ginastera
+  title: Sonata No. 1, Op. 22
+  duration_minutes: 15.4
+processing:
+  ambisonics: true
+  ambisonics_orders:
+  - 3
+  - 5
+  ambisonics_channels:
+  - 16
+  - 36
+  processing_chain:
+    ZM-1: A-format to 3OA B-format via ZYLIA Studio PRO/ZAM (ACN/SN3D)
+    Spcmic: 84ch A-format to 5OA B-format via Spacemic VST 1.0.2 alpha (ACN/SN3D)
+files:
+- filename: 3OA_ZM1_AGinastera-Sonata1.wav
+  duration_minutes: 15.4
+  channels: 16
+  ambisonics_order: 3
+  microphone: Zylia ZM-1
+  lufs_i: -18.16
+  true_peak_db: -0.5
+  lra: 21.799999999999997
+- filename: 5OA_Spcmic_AGinastera-Sonata1.wav
+  duration_minutes: 15.4
+  channels: 36
+  ambisonics_order: 5
+  microphone: Harpex Spcmic
+  lufs_i: -15.84
+  true_peak_db: -0.5
+  lra: 21.0
+rendered_files_count: 2
+rendered_files_size_gb: 6.4
+notes: Spcmic ~2.3 dB louder than ZM-1 at same position (likely due to different capsule sensitivities/conversion)
+acoustics_reference: Król & Jankowski (2023), MSc thesis, Gdańsk University of Technology

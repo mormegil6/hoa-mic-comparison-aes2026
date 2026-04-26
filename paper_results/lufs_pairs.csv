@@ -1,0 +1,6 @@
+pair,zm1_key,spcmic_key,lufs_zm1_multichannel,lufs_spcmic_multichannel,delta_multichannel_dB,lufs_zm1_W,lufs_spcmic_W,delta_W_dB
+Franck_3OA,ZMOneFranck,SpcmicThreeOAFranck,-21.480,-18.190,3.290,-23.006,-25.637,-2.631
+Prokofiev_3OA,ZMOneProkofiev,SpcmicThreeOAProkofiev,-20.620,-17.290,3.330,-22.470,-24.789,-2.319
+Ginastera_5OA,ZMOneGinastera,SpcmicFiveOAGinastera,-18.160,-15.840,2.320,-20.235,-21.074,-0.840
+Franck_5OA,ZMOneFranck,SpcmicFiveOAFranck,-21.480,-20.350,1.130,-23.006,-25.612,-2.606
+Prokofiev_5OA,ZMOneProkofiev,SpcmicFiveOAProkofiev,-20.620,-19.620,1.000,-22.470,-24.786,-2.316

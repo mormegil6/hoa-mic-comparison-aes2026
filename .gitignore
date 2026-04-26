@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# macOS
+.DS_Store
+
+# Private metadata (source YAMLs contain personal notes)
+metadata/*_source.yaml
+metadata/*.yaml
+!metadata/*_public.yaml
+
+# Large WAV sources (not tracked – available from corpus DOI)
+_wav_sources/
+
+# Render stats (derived from DAW, not needed for reproduction)
+render_stats/
