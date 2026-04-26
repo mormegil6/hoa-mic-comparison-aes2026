@@ -16,7 +16,7 @@ Figures produced:
 
 Usage:
     python plot_paper.py
-    python plot_paper.py --base /Volumes/PNY...
+    python plot_paper.py --base /path/to/hoa-corpus
 
 Author: Bartlomiej Mroz
 """

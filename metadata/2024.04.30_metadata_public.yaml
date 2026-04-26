@@ -47,7 +47,7 @@ equipment:
   primary_mic_serial: SM19DRXWS03100AR
   primary_mic_mount: K&M tripod with K&M 23550 stereo bar (shared with Spcmic, ~17cm apart)
   primary_mic_height_m: 1.7
-  primary_mic_distance_source_m: 0.5
+  primary_mic_distance_source_m: 1.5
   primary_mic_orientation: facing piano well/soundboard
   secondary_mics:
   - model: Harpex Spcmic

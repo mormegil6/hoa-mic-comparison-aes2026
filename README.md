@@ -27,8 +27,10 @@ For methodology, interpretation, and results discussion, please refer to the mai
 │   ├── lufs_pairs.csv
 │   ├── spatial_energy.csv
 │   ├── directional.csv
-│   ├── paper_variables_submission51-ZM1vsSpcmic.tex
-│   └── fig_*.pdf
+│   ├── paper_variables.tex
+│   ├── fig_*.pdf
+│   ├── fig_*.png
+│   └── fig_setup_recording2.jpg
 ├── LICENSE
 └── README.md
 ```
@@ -60,8 +62,10 @@ The script reads rendered B-format WAV files and writes:
 | `paper_results/lufs_pairs.csv` | LUFS deltas per (mic, piece) |
 | `paper_results/spatial_energy.csv` | Per-order dBFS, rolloff, delta |
 | `paper_results/directional.csv` | X/W, Y/W, Z/W ratios per file |
-| `paper_results/paper_variables_*.tex` | `\newcommand` definitions consumed by the manuscript |
-| `paper_results/fig_*.pdf` | Publication figures |
+| `paper_results/paper_variables.tex` | `\newcommand` definitions consumed by the manuscript |
+| `paper_results/fig_*.pdf` | Publication figures (vector, for the paper) |
+| `paper_results/fig_*.png` | Publication figures (raster previews) |
+| `paper_results/fig_setup_recording2.jpg` | Recording session setup photo |
 
 The manuscript imports `paper_variables.tex` via `\input{}` — every numeric claim is written as a macro, so re-running `analyze_paper.py` and recompiling LaTeX is the complete reproducibility loop.
 
@@ -78,11 +82,10 @@ pip install numpy scipy soundfile matplotlib pyyaml
 ### Run the Analysis
 
 ```sh
-# Default: reads recordings from /Volumes/PNY 1TB/HOA recordings by BM - all
 python3 analyze_paper.py
 
-# Point to a custom location:
-python3 analyze_paper.py --base-dir /path/to/corpus
+# Point to the corpus download location:
+python3 analyze_paper.py --base /path/to/hoa-corpus
 ```
 
 Running `analyze_paper.py` calls `plot_paper.py` automatically. All outputs are written to `paper_results/`.

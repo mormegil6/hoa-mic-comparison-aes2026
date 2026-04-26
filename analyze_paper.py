@@ -42,7 +42,7 @@ from scipy.ndimage import uniform_filter1d
 # ---------------------------------------------------------------------------
 # Recording inventory
 # ---------------------------------------------------------------------------
-DEFAULT_BASE = Path("/Volumes/PNY 1TB/HOA recordings by BM - all")
+DEFAULT_BASE = Path("/path/to/hoa-corpus")
 SESSION_AUG15 = "2024.08.15 -- ZM1 Spcmic Saramonic"
 SESSION_APR30 = "2024.04.30 -- piano recording"
 
