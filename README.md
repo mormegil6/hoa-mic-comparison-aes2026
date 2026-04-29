@@ -19,8 +19,8 @@ For methodology, interpretation, and results discussion, please refer to the mai
 ├── analyze_paper.py                        # Single-source analysis script
 ├── plot_paper.py                           # Figure generation (called from analyze_paper.py)
 ├── check_aliasing_band.py                  # Spatial-aliasing band verification
-├── main_submission51-ZM1vsSpcmic.pdf       # Final submitted paper (AES Express Paper 51)
-├── poster_submission51.pdf                 # Final submitted poster (AES Convention 160)
+├── EP51_paper.pdf                          # Final submitted paper (AES Express Paper 51)
+├── EP51_poster.pdf                         # Final submitted poster (AES Convention 160)
 ├── metadata/
 │   ├── 2024.04.30_metadata_public.yaml     # April 2024 session (Ginastera)
 │   └── 2024.08.15_metadata_public.yaml     # August 2024 session (Franck, Prokofiev)
