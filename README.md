@@ -110,24 +110,31 @@ python3 check_aliasing_band.py
 If you use this code or the recordings, please cite:
 
 ```bibtex
-@inproceedings{mroz2026zm1spcmic,
-  author    = {Mr\'oz, Bart\l{}omiej and Zaporowski, Szymon},
-  title     = {{Zylia ZM-1} vs. {Harpex Spcmic}: A Case Study of
-               Higher-Order Ambisonic Recording Performance},
-  booktitle = {Audio Engineering Society Convention 160},
+@inproceedings{mroz_zm1_spcmic_2026,
+  author    = {Mróz, Bartłomiej and Zaporowski, Szymon},
+  title     = {{Zylia ZM-1 vs. Harpex Spcmic: A Case Study of Higher-Order Ambisonic Recording Performance}},
+  booktitle = {160th {Audio} {Engineering} {Society} {Convention}},
   address   = {Copenhagen, Denmark},
   month     = may,
   year      = {2026},
-  note      = {Express Paper 51}
+  publisher = {Audio Engineering Society},
+  copyright = {Creative Commons Attribution 4.0 International License},
+  language  = {en},
+  url       = {https://aes.org/publications/elibrary-page/?id=23166},
 }
 
-@misc{mroz2026hoacorpus,
-  author    = {Mr\'oz, Bart\l{}omiej and Zaporowski, Szymon},
-  title     = {Higher-Order Ambisonics Recording Corpus},
-  year      = {2026},
-  publisher = {Bridge of Data (Most Danych), Gda\'nsk University of Technology},
-  doi       = {10.34808/5xe2-ah94},
-  url       = {https://doi.org/10.34808/5xe2-ah94}
+@misc{mroz_seven-year_2026,
+  author       = {Mróz, Bartłomiej and Zaporowski, Szymon},
+  title        = {A {Seven}-{Year} {Corpus} of {Higher}-{Order} {Ambisonics} {Recordings}},
+  howpublished = {MOST Danych, Gdańsk University of Technology},
+  month        = feb,
+  year         = {2026},
+  doi          = {10.34808/5XE2-AH94},
+  url          = {https://mostwiedzy.pl/en/open-research-data/a-seven-year-corpus-of-higher-order-ambisonics-recordings,205035347247528-0},
+  language     = {en},
+  urldate      = {2026-05-02},
+  publisher    = {Gdańsk University of Technology},
+  keywords     = {Ambisonics, B-format, Higher-Order Ambisonics, immersive audio, MEMS microphone, music recording, recording corpus, room acoustics, spatial audio, spherical microphone array}
 }
 ```
 

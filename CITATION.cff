@@ -1,0 +1,65 @@
+cff-version: 1.2.0
+type: software
+title: "ZM-1 vs Spcmic: HOA Recording Performance Analysis"
+authors:
+  - family-names: "Mróz"
+    given-names: "Bartłomiej"
+    orcid: "https://orcid.org/0000-0003-4850-9395"
+    affiliation: "Gdańsk University of Technology"
+  - family-names: "Zaporowski"
+    given-names: "Szymon"
+    affiliation: "Gdańsk University of Technology"
+date-released: 2026-05-01
+version: "1.0"
+abstract: "Reproducible Python pipeline for the AES Convention 160 Express Paper 'Zylia ZM-1 vs. Harpex Spcmic: A Case Study of Higher-Order Ambisonic Recording Performance' (Express Paper #51, Copenhagen 2026). Reads B-format WAV files, computes spectral, loudness, spatial-energy, and directional metrics, and emits LaTeX \\newcommand macros consumed directly by the manuscript."
+repository-code: "https://git.pg.edu.pl/p829296/hoa-mic-comparison-aes2026"
+url: "https://git.pg.edu.pl/p829296/hoa-mic-comparison-aes2026"
+license: "CC-BY-4.0"
+keywords:
+  - ambisonics
+  - higher-order
+  - microphone comparison
+  - audio analysis
+  - spatial audio
+  - HOA
+references:
+  - type: conference-paper
+    authors:
+      - family-names: "Mróz"
+        given-names: "Bartłomiej"
+      - family-names: "Zaporowski"
+        given-names: "Szymon"
+    title: "Zylia ZM-1 vs. Harpex Spcmic: A Case Study of Higher-Order Ambisonic Recording Performance"
+    conference:
+      name: "160th Audio Engineering Society Convention"
+      city: Copenhagen
+      country: Denmark
+    month: 5
+    year: 2026
+    publisher:
+      name: "Audio Engineering Society"
+    url: "https://aes.org/publications/elibrary-page/?id=23166"
+  - type: dataset
+    authors:
+      - family-names: "Mróz"
+        given-names: "Bartłomiej"
+      - family-names: "Zaporowski"
+        given-names: "Szymon"
+    title: "A Seven-Year Corpus of Higher-Order Ambisonics Recordings"
+    repository-code: "https://mostwiedzy.pl/en/open-research-data/a-seven-year-corpus-of-higher-order-ambisonics-recordings,205035347247528-0"
+    month: 2
+    year: 2026
+    publisher:
+      name: "MOST Danych, Gdańsk University of Technology"
+    doi: "10.34808/5XE2-AH94"
+    keywords:
+      - Ambisonics
+      - B-format
+      - Higher-Order Ambisonics
+      - immersive audio
+      - MEMS microphone
+      - music recording
+      - recording corpus
+      - room acoustics
+      - spatial audio
+      - spherical microphone array
