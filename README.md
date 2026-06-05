@@ -155,4 +155,4 @@ If you use this code or the recordings, please cite:
 
 ## Contact
 
-Bartłomiej Mróz · bartlomiej.mroz@pg.edu.pl · Department of Multimedia Systems, Gdańsk University of Technology
+Bartłomiej Mróz · bartlomiej.mroz@pg.edu.pl · [bmroz.eu](https://bmroz.eu) · Department of Multimedia Systems, Gdańsk University of Technology
