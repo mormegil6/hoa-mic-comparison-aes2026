@@ -3,7 +3,7 @@
 [![scipy](https://img.shields.io/badge/scipy-1.11+-blue.svg)]() 
 [![soundfile](https://img.shields.io/badge/soundfile-0.12+-blue.svg)]() 
 [![matplotlib](https://img.shields.io/badge/matplotlib-3.7+-blue.svg)]() 
-![Convention](https://img.shields.io/badge/AES%20Convention-160th%20Copenhagen-lightgrey)
+[![Convention](https://img.shields.io/badge/AES%20Convention-160th%20Copenhagen-lightgrey)]()
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 # ZM-1 vs Spcmic - HOA Recording Performance Analysis
