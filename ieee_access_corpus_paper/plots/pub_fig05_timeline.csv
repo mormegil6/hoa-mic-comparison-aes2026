@@ -1,0 +1,24 @@
+session,date,content_type,venue,venue_type,is_outdoor
+2019.04.12 -- the passion concert,2019-04-12,orchestra,Kościół Świętej Trójcy (Holy Trinity Church),church,False
+2021.03.27 -- piano recording,2021-03-27,solo_piano,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2021.06.27 -- choir recording,2021-06-27,choir,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2022.03.10 -- WETI Faculty 70 jubilee concert,2022-03-10,choir_with_orchestra,"Hol przed Aulą Politechniki Gdańskiej (Hall in front of Main Aula, Gdańsk University of Technology)",concert_hall,False
+"2022.03.25 -- Baltic sea pier in Sopot, Poland",2022-03-25,ambient,Baltic Sea Pier,outdoor,True
+2022.04.13-14 -- piano recording,2022-04-13,solo_piano,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2022.04.21 -- charity concert for Ukraine,2022-04-21,choir_with_soloists,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2022.06.27 -- piano recording,2022-06-27,solo_piano,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2023.02.21 -- carnival concert,2023-02-21,choir_with_ensemble,"Hol przed Aulą Politechniki Gdańskiej (Hall in front of Main Aula, Gdańsk University of Technology)",concert_hall,False
+2023.06.03 -- Deus Ex Machina,2023-06-03,choir,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2023.08.04 -- piano recording,2023-08-04,solo_piano,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2023.10.12 -- choir concert,2023-10-12,choir,Polska Filharmonia Bałtycka (Polish Baltic Philharmonic),concert_hall,False
+"2023.12.07 -- piano, bass, vocal, violin, percussives",2023-12-07,ensemble,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2024.03.07 -- piano duet recording (Party),2024-03-07,piano_duet,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2024.03.09 -- etno recording (Emigrah),2024-03-09,ensemble,Fiqu Miqu Studio,recording_studio,False
+2024.04.30 -- piano recording,2024-04-30,solo_piano,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2024.07.27 -- quarry,2024-07-27,vr_film_production,Kamieniołom Piechcin (Piechcin Quarry),outdoor_quarry,True
+2024.08.15 -- ZM1 Spcmic Saramonic,2024-08-15,solo_piano,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2024.12.10 -- piano recording - Chopin,2024-12-10,solo_piano,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2025.01.10 -- piano recording - Chopin,2025-01-10,solo_piano,Akademia Muzyczna im. Stanisława Moniuszki w Gdańsku - Sala Koncertowa (aMuz Main Concert Hall),concert_hall,False
+2025.02.05 -- Violin and piano,2025-02-05,chamber,Aula Politechniki Gdańskiej (Main Aula of Gdańsk University of Technology),concert_hall,False
+2025.09.28 -- film set cave,2025-09-28,vr_film_production,Agrotourism barn - styrofoam cave film set,indoor_film_set,False
+2026.01.18 -- choir concert of christmas carols,2026-01-18,choir,Archikatedra Oliwska (Oliwa Cathedral),church,False

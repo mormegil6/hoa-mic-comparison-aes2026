@@ -17,3 +17,7 @@ _wav_sources/
 # Render stats (derived from DAW, not needed for reproduction)
 render_stats/
 README_submission51-ZM1vsSpcmic.md
+
+# Local virtual environments
+.venv*/
+venv/

@@ -1,0 +1,9 @@
+key,microphone,mic,format,piece,max_order,order0_dBFS,order0_ci_lo,order0_ci_hi,order1_dBFS,order1_ci_lo,order1_ci_hi,order2_dBFS,order2_ci_lo,order2_ci_hi,order3_dBFS,order3_ci_lo,order3_ci_hi,rolloff_0_to_3_dB,rolloff_ci_lo,rolloff_ci_hi,order4_dBFS,order4_ci_lo,order4_ci_hi,order5_dBFS,order5_ci_lo,order5_ci_hi
+ZMOneFranck,ZM-1 (3OA),ZM-1,3OA,Franck,3,-23.216,-24.822,-21.875,-31.783,-33.325,-30.505,-42.925,-44.901,-41.487,-50.612,-52.969,-48.946,27.396,26.956,28.264,,,,,,
+ZMOneProkofiev,ZM-1 (3OA),ZM-1,3OA,Prokofiev,3,-22.838,-24.514,-21.677,-31.481,-33.070,-30.429,-40.903,-42.969,-39.763,-48.841,-51.148,-47.596,26.003,25.382,27.075,,,,,,
+SpcmicThreeOAFranck,Spcmic (3OA),Spcmic,3OA,Franck,3,-26.246,-27.999,-24.893,-30.788,-32.517,-29.473,-33.039,-34.783,-31.691,-34.684,-36.440,-33.334,8.438,8.432,8.448,,,,,,
+SpcmicThreeOAProkofiev,Spcmic (3OA),Spcmic,3OA,Prokofiev,3,-25.669,-27.383,-24.479,-30.282,-31.983,-29.085,-32.307,-34.021,-31.102,-34.149,-35.868,-32.962,8.480,8.470,8.493,,,,,,
+SpcmicFiveOAFranck,Spcmic (5OA),Spcmic,5OA,Franck,5,-26.202,-27.956,-24.910,-30.753,-32.471,-29.472,-37.949,-39.742,-36.678,-41.304,-43.081,-40.049,15.102,15.004,15.271,-44.383,-46.135,-43.139,-47.052,-48.763,-45.825
+SpcmicFiveOAProkofiev,Spcmic (5OA),Spcmic,5OA,Prokofiev,5,-25.641,-27.447,-24.450,-30.233,-32.027,-29.058,-37.614,-39.502,-36.363,-41.128,-42.980,-39.885,15.487,15.306,15.721,-44.351,-46.161,-43.124,-47.093,-48.861,-45.877
+SRVRMICFranck,SR-VRMIC (1OA),SR-VRMIC,1OA,Franck,1,-26.582,-28.220,-25.231,-29.709,-31.405,-28.338,,,,,,,,,,,,,,,
+SRVRMICProkofiev,SR-VRMIC (1OA),SR-VRMIC,1OA,Prokofiev,1,-26.192,-27.886,-25.016,-29.108,-30.761,-27.935,,,,,,,,,,,,,,,

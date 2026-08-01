@@ -2,18 +2,23 @@
 
 # ZM-1 vs Spcmic - HOA Recording Performance Analysis
 
-Supplementary materials for the paper:
+Supplementary materials for two papers built on the same recordings:
 
 ***"Zylia ZM-1 vs. Harpex Spcmic: A Case Study of Higher-Order Ambisonic Recording Performance"***  
 Bartłomiej Mróz, Szymon Zaporowski · *160th AES Convention*, Copenhagen, May 2026
+
+***"A Seven-Year Higher-Order Ambisonics Recording Corpus: Dataset, Methodology, and a Co-Located Spherical Microphone Array Comparison"***  
+Bartłomiej Mróz, Szymon Zaporowski · *IEEE Access* (under review)
 
 This repository contains:
 - Reproducible analysis pipeline (Python scripts)
 - Session metadata (two recording sessions)
 - Pre-computed results (CSV tables, LaTeX macros, publication figures)
+- Bootstrap uncertainty analysis with committed frame-energy caches, so the statistics reproduce **without downloading the audio**
+- The corpus paper's figure and LaTeX-macro pipeline (`ieee_access_corpus_paper/`)
 - Final submission PDFs (paper + poster)
 
-For methodology, interpretation, and results discussion, please refer to the main paper.
+For methodology, interpretation, and results discussion, please refer to the main papers.
 
 ## Repository Structure
 
@@ -22,6 +27,9 @@ For methodology, interpretation, and results discussion, please refer to the mai
 ├── analyze_paper.py                        # Single-source analysis script
 ├── plot_paper.py                           # Figure generation (called from analyze_paper.py)
 ├── check_aliasing_band.py                  # Spatial-aliasing band verification
+├── revision_stats.py                       # Paired moving-block bootstrap (confidence intervals)
+├── revision_figures.py                     # Two-piece Fig. 9, Figs 10a/10b with CI whiskers
+├── requirements.txt                        # Python dependencies
 ├── EP51_paper.pdf                          # Final submitted paper (AES Convention 160, Express Paper 51)
 ├── EP51_poster.pdf                         # Final submitted poster (AES Convention 160, Express Paper 51)
 ├── metadata/
@@ -40,6 +48,19 @@ For methodology, interpretation, and results discussion, please refer to the mai
 │   ├── recording1_photo2.jpg
 │   ├── recording2_photo1.jpg
 │   └── recording2_photo2.jpg
+├── revision_results/                       # Bootstrap CIs - see revision_results/README.md
+│   ├── spatial_energy_two_piece.csv        #   per-order dBFS + 95% CIs, both pieces
+│   ├── rolloff_bootstrap.csv               #   rolloff + paired between-array difference
+│   ├── directional_ci.csv                  #   W level, X/Y/Z-over-W with CIs
+│   ├── revision_stats_variables.tex        #   LaTeX macros for the manuscript
+│   ├── frame_order_energies_*.csv          #   frame-level per-order energies
+│   ├── frame_difference_3OA_*.csv          #   annotated ZM-1 vs Spcmic difference files
+│   ├── cache/frames_*.npz                  #   frame-energy caches (reproduce without audio)
+│   └── figures/
+├── ieee_access_corpus_paper/               # Corpus paper pipeline - see its own README.md
+│   ├── pyscripts/                          #   corpus figures, LaTeX macros, room acoustics
+│   ├── plots/                              #   pre-computed figure inputs (CSV)
+│   └── data/                               #   render statistics, aggregated macros, inventory
 ├── LICENSE
 └── README.md
 ```
@@ -88,7 +109,7 @@ LUFS-I is computed in-script via ITU-R BS.1770-5 K-weighting on the W channel; n
 ### Prerequisites
 
 ```sh
-pip install numpy scipy soundfile matplotlib pyyaml
+pip install -r requirements.txt
 ```
 
 ### Run the Analysis
@@ -107,6 +128,34 @@ Running `analyze_paper.py` calls `plot_paper.py` automatically. All outputs are 
 ```sh
 python3 check_aliasing_band.py
 ```
+
+## Uncertainty Analysis (Bootstrap Confidence Intervals)
+
+`revision_stats.py` attaches confidence intervals to the microphone-comparison results.
+Each recording is analysed in 1-second frames; because all arrays captured the same
+performance simultaneously, frames are **paired across arrays by wall-clock time**, so
+the between-array rolloff difference is resampled as a paired statistic and the
+programme-level variance shared by both arrays cancels. Resampling uses a moving-block
+bootstrap (30-s blocks, 2000 replicates, fixed seed) to respect the temporal correlation
+of musical material.
+
+```sh
+python3 revision_stats.py --base-dir /path/to/hoa-corpus   # frame caches + CIs
+python3 revision_figures.py                                # figures with CI whiskers
+```
+
+The frame-energy caches in `revision_results/cache/` are committed (≈1.2 MB), so both
+commands reproduce every statistic and figure **without downloading the ~48 GB of session
+audio** — `revision_stats.py` only reads WAV files whose cache is missing. Full details,
+the resampling rationale, and the headline numbers are in
+[`revision_results/README.md`](revision_results/README.md).
+
+## Corpus Paper Pipeline
+
+`ieee_access_corpus_paper/` contains the figure and LaTeX-macro pipeline for the IEEE
+Access corpus paper (corpus-wide statistics, room acoustics, loudness distribution,
+session inventory). Most of its figures regenerate from the committed CSVs with no audio
+required. See [`ieee_access_corpus_paper/README.md`](ieee_access_corpus_paper/README.md).
 
 ## Citation
 
