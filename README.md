@@ -50,7 +50,7 @@ For methodology, interpretation, and results discussion, please refer to the mai
 
 The recordings are not included in this repository. Download them separately from the DOI above and point the analysis script to their location with `--base-dir`.
 
-Two recording sessions at the Main Aula of Gdańsk University of Technology (RT60 ≈ 1.97 s):
+Two recording sessions at the Main Aula of Gdańsk University of Technology (RT60 ~ 1.97 s):
 
 **Session 1** - 2024-08-15 · Microphone comparison (ZM-1, Spcmic, Saramonic SR-VRMIC)
 - Repertoire: César Franck - *Prélude, Choral et Fugue*; Sergei Prokofiev - *Piano Sonata No. 4 in C minor, Op. 29*

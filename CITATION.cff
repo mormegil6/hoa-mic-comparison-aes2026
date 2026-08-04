@@ -1,4 +1,5 @@
 cff-version: 1.2.0
+message: "If you use this software, please cite both the software and the associated paper."
 type: software
 title: "ZM-1 vs Spcmic: HOA Recording Performance Analysis"
 authors:
@@ -33,13 +34,13 @@ references:
     conference:
       name: "160th Audio Engineering Society Convention"
       city: Copenhagen
-      country: Denmark
+      country: DK
     month: 5
     year: 2026
     publisher:
       name: "Audio Engineering Society"
     url: "https://aes.org/publications/elibrary-page/?id=23166"
-  - type: dataset
+  - type: data
     authors:
       - family-names: "Mróz"
         given-names: "Bartłomiej"
