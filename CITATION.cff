@@ -5,10 +5,11 @@ title: "ZM-1 vs Spcmic: HOA Recording Performance Analysis"
 authors:
   - family-names: "Mróz"
     given-names: "Bartłomiej"
-    orcid: "https://orcid.org/0000-0003-4850-9395"
+    orcid: "https://orcid.org/0000-0002-8983-9050"
     affiliation: "Gdańsk University of Technology"
   - family-names: "Zaporowski"
     given-names: "Szymon"
+    orcid: "https://orcid.org/0000-0003-0814-1097"
     affiliation: "Gdańsk University of Technology"
 date-released: 2026-05-01
 version: "1.0"
@@ -28,8 +29,10 @@ references:
     authors:
       - family-names: "Mróz"
         given-names: "Bartłomiej"
+        orcid: "https://orcid.org/0000-0002-8983-9050"
       - family-names: "Zaporowski"
         given-names: "Szymon"
+        orcid: "https://orcid.org/0000-0003-0814-1097"
     title: "Zylia ZM-1 vs. Harpex Spcmic: A Case Study of Higher-Order Ambisonic Recording Performance"
     conference:
       name: "160th Audio Engineering Society Convention"
@@ -44,8 +47,10 @@ references:
     authors:
       - family-names: "Mróz"
         given-names: "Bartłomiej"
+        orcid: "https://orcid.org/0000-0002-8983-9050"
       - family-names: "Zaporowski"
         given-names: "Szymon"
+        orcid: "https://orcid.org/0000-0003-0814-1097"
     title: "A Seven-Year Corpus of Higher-Order Ambisonics Recordings"
     repository-code: "https://mostwiedzy.pl/en/open-research-data/a-seven-year-corpus-of-higher-order-ambisonics-recordings,205035347247528-0"
     month: 2
