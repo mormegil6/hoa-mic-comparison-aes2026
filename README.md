@@ -46,7 +46,7 @@ For methodology, interpretation, and results discussion, please refer to the mai
 
 ## Recordings
 
-**Recording corpus**: Higher-Order Ambisonics Recording Corpus, deposited at *Bridge of Data* (Most Danych), Gdańsk University of Technology - [doi.org/10.34808/5xe2-ah94](https://doi.org/10.34808/5xe2-ah94) (CC BY-NC-SA 4.0)
+**Recording corpus**: Higher-Order Ambisonics Recording Corpus, deposited at *Bridge of Data* (Most Danych), Gdańsk University of Technology - [doi.org/10.34808/w8bx-2094](https://doi.org/10.34808/w8bx-2094) (CC BY-NC-SA 4.0)
 
 The recordings are not included in this repository. Download them separately from the DOI above and point the analysis script to their location with `--base-dir`.
 
@@ -132,7 +132,7 @@ If you use this code or the recordings, please cite:
   howpublished = {MOST Danych, Gdańsk University of Technology},
   month        = feb,
   year         = {2026},
-  doi          = {10.34808/5XE2-AH94},
+  doi          = {10.34808/W8BX-2094},
   url          = {https://mostwiedzy.pl/en/open-research-data/a-seven-year-corpus-of-higher-order-ambisonics-recordings,205035347247528-0},
   language     = {en},
   urldate      = {2026-05-02},
